@@ -71,7 +71,7 @@ module.exports = {
     // 备案号
     record: '粤ICP备18051267号',
     // 项目开始时间
-    startYear: '2015'
+    startYear: '2015',
     /**
      * 密钥 (if your blog is private)
      */
@@ -86,10 +86,10 @@ module.exports = {
      * valine 设置 (if you need valine comment )
      */
 
-    // valineConfig: {
-    //   appId: '...',// your appId
-    //   appKey: '...', // your appKey
-    // }
+    valineConfig: {
+      appId: 'BI7dTvtcwGoRI00UA9Lkd2h5-gzGzoHsz',// your appId
+      appKey: 'SdqXUwNYd3P9EM70qA0Kbghg', // your appKey
+    }
   },
   markdown: {
     lineNumbers: true
