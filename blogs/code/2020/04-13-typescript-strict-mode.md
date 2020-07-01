@@ -5,7 +5,7 @@ tags:
  - Typescript
  - Node
 categories: 
- - code
+ - Code
 ---
 
 开启了严格模式后，可以帮助我们提前发现很多 BUG，关于严格模式的详细介绍，可以看看[这篇文章](https://juejin.im/post/5dba8981e51d452a1a580f9d)

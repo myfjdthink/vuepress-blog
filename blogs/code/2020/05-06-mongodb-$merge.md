@@ -4,7 +4,7 @@ date: 2020-05-06
 tags:
  - mongodb
 categories: 
- - code
+ - Code
 ---
 ## 介绍
 $merge，又称按需式物化视图，是MongoDB4.2最强大的新增功能之一。
