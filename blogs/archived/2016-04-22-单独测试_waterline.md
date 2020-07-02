@@ -46,7 +46,7 @@ var sails = require('sails');before(function(done) {  // Increase the Mocha time
 1. sails 的人员也提供了一个 Express 里使用 waterline 的示例 [Waterline v0.10 Express Example.js](https://gist.github.com/mikermcneil/8443381)
 跟上一个例子同样的问题，还是没讲怎么配置 mongo。
 
-![-坑爹.jpg](./image/-坑爹.jpg)
+![ken_die.jpg](./image/ken_die.jpg)
 
 ### 自己实现
 
