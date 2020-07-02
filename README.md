@@ -1,35 +1,28 @@
-## 静态博客
-
-使用 vuepress 构建
-使用 vuepress-theme-reco 主题
-
-部署在腾讯云
-
-## 写博客
-在 posts 目录编写 md
-
-实时预览：
-
-```bash
-npm run i
-npm run dev
-```
-## 发布
-
-先安装 Serverless。
-```bash
-npm install -g serverless
-```
-关于 Serverless 建站，请看这两篇文章
-
-[基于 Serverless 的 VuePress 极简静态网站](https://serverlesscloud.cn/best-practice/2020-02-04-vuepress-serverless)
-
-[基于 Serverless Component 全栈解决方案 Ⅱ](https://www.serverless.com/cn/learn/case-studies/serverless-fullstack-vue-practice-pro/)
-
-
-发布
-
-```bash
-npm run build
-sls --debug
-```
+---
+home: true
+heroText: 天如
+tagline: 做个追求的程序员
+# heroImage: /hero.png
+# heroImageStyle: {
+#   maxWidth: '600px',
+#   width: '100%',
+#   display: block,
+#   margin: '9rem auto 2rem',
+#   background: '#fff',
+#   borderRadius: '1rem',
+# }
+bgImage: '/background-cover.jpg'
+bgImageStyle: {
+  height: '450px'
+}
+isShowTitleInHome: false
+actionText: Guide
+actionLink: /views/other/guide
+features:
+- title: Yesterday
+  details: 开发一款看着开心、写着顺手的 vuepress 博客主题
+- title: Today
+  details: 希望帮助更多的人花更多的时间在内容创作上，而不是博客搭建上
+- title: Tomorrow
+  details: 希望更多的爱好者能够参与进来，帮助这个主题更好的成长
+---
