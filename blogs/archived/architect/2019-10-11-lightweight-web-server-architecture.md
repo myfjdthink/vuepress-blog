@@ -5,7 +5,7 @@ tags:
  - posts
  - 架构
 categories: 
- - Archived
+ - Architect
 ---
 # 轻量型互联网应用架构方式
 
@@ -56,7 +56,7 @@ categories:
 
 整体架构图：
 
-![b07f8caa18aca530cd46f5d3f44f9493.png](./image/b07f8caa18aca530cd46f5d3f44f9493.png)
+![b07f8caa18aca530cd46f5d3f44f9493.png](../image/b07f8caa18aca530cd46f5d3f44f9493.png)
 
 ## 基础架构实践
 

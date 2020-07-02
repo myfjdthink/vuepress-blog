@@ -6,7 +6,7 @@ tags:
  - posts
  - 架构
 categories: 
- - Archived
+ - Architect
 ---
 # 未来已来：云原生 Cloud Native
 
@@ -109,7 +109,7 @@ Docker的出现成为了软件开发行业新的分水岭；容器技术的成�
 
 这是一个典型的微服务架构图
 
-![904a5ec4b27483aee51c03c8557bd4d5.png](./image/904a5ec4b27483aee51c03c8557bd4d5.png)
+![904a5ec4b27483aee51c03c8557bd4d5.png](../image/904a5ec4b27483aee51c03c8557bd4d5.png)
 
 Spring Cloud 体系提供了服务发现、负载均衡、失效转移、动态扩容、数据分片、调用链路监控等分布式系统的核心功能，一度成为微服务的最佳实践。
 
@@ -149,7 +149,7 @@ Service Mesh 是对 Kubernetes 的增强，提供了更多的能力。
 
 最后我们用一个流程图来描述后端架构的发展历程
 
-![0ec340f33fb2b4dbdf558449107cca8e.png](./image/0ec340f33fb2b4dbdf558449107cca8e.png)
+![0ec340f33fb2b4dbdf558449107cca8e.png](../image/0ec340f33fb2b4dbdf558449107cca8e.png)
 
 **每个关键节点的大概时间表**
 
@@ -175,7 +175,7 @@ Service Mesh 经过2年的发展，目前 Service Mesh 已经足够成熟，已�
 
 2018 年 CNCF ([Cloud Native Computing Foundation](https://www.cncf.io/))更新了云原生的定义。
 
-这是新定义中描述的代表技术，其中容器和微服务两项在不同时期的不同定义中都有出现，而服务网格这个在 2017 年才开始被社区接纳的新热点技术被非常醒目的列出来，和微服务并列，而不是我们通常认为的服务网格只是微服务在实施时的一种新的方式。![0e7bf2db484f18f3ca373bd0773ffab8.png](./image/0e7bf2db484f18f3ca373bd0773ffab8.png)
+这是新定义中描述的代表技术，其中容器和微服务两项在不同时期的不同定义中都有出现，而服务网格这个在 2017 年才开始被社区接纳的新热点技术被非常醒目的列出来，和微服务并列，而不是我们通常认为的服务网格只是微服务在实施时的一种新的方式。![0e7bf2db484f18f3ca373bd0773ffab8.png](../image/0e7bf2db484f18f3ca373bd0773ffab8.png)
 
 那我们该如何理解云原生呢？我们尝试一下，将 Cloud Native 这个词汇拆开来理解，先看看什么是 Cloud。
 
@@ -183,23 +183,23 @@ Service Mesh 经过2年的发展，目前 Service Mesh 已经足够成熟，已�
 
 快速回顾一下云计算的历史，来帮助我们对云有个更感性的认识。
 
-![84e47db0ce05a2ca9a3ecb06317b5adb.png](./image/84e47db0ce05a2ca9a3ecb06317b5adb.png)
+![84e47db0ce05a2ca9a3ecb06317b5adb.png](../image/84e47db0ce05a2ca9a3ecb06317b5adb.png)
 
 云计算的出现和虚拟化技术的发展和成熟密切相关，2000 年前后 x86 的虚拟机技术成熟后，云计算逐渐发展起来。
 
-![372d7d3fb6da14098b5b63245401c814.png](./image/372d7d3fb6da14098b5b63245401c814.png)
+![372d7d3fb6da14098b5b63245401c814.png](../image/372d7d3fb6da14098b5b63245401c814.png)
 
 基于虚拟机技术，陆续出现了 IaaS/PaaS/FaaS 等形态，以及他们的开源版本。
 
-![cb84372097b3e35cb9a1d48c24d56fcf.png](./image/cb84372097b3e35cb9a1d48c24d56fcf.png)
+![cb84372097b3e35cb9a1d48c24d56fcf.png](../image/cb84372097b3e35cb9a1d48c24d56fcf.png)
 
 2013 年 docker 出现，容器技术成熟，然后围绕容器编排一场大战，最后在 2017 年底，kubernetes 胜出。2015 年 CNCF 成立，并在近年形成了 cloud native 生态。
 
 在这个过程中，云的形态一直变化，可以看到：供应商提供的功能越来越多，而客户或者说应用需要自己管理的功能越来越少。
 
-![03bdb5f6de728bdb76dbb9a003b62263.png](./image/03bdb5f6de728bdb76dbb9a003b62263.png)
+![03bdb5f6de728bdb76dbb9a003b62263.png](../image/03bdb5f6de728bdb76dbb9a003b62263.png)
 
-**架构也在一直适应云计算的变化**![0185a2a404942f2aec01b6933a87f909.png](./image/0185a2a404942f2aec01b6933a87f909.png)
+**架构也在一直适应云计算的变化**![0185a2a404942f2aec01b6933a87f909.png](../image/0185a2a404942f2aec01b6933a87f909.png)
 
 ### 什么是原生 Native
 
@@ -209,7 +209,7 @@ Service Mesh 经过2年的发展，目前 Service Mesh 已经足够成熟，已�
 
 那 Cloud 和 native 和在一起，又该如何理解？
 
-![bd47c8d112f60f5e91e3aab6bd7679dc.png](./image/bd47c8d112f60f5e91e3aab6bd7679dc.png)
+![bd47c8d112f60f5e91e3aab6bd7679dc.png](../image/bd47c8d112f60f5e91e3aab6bd7679dc.png)
 
 这里我们抛出一个我们自己的理解：云原生代表着原生为云设计。详细的解释是：应用原生被设计为在云上以最佳方式运行，充分发挥云的优势。
 
@@ -219,35 +219,35 @@ Service Mesh 经过2年的发展，目前 Service Mesh 已经足够成熟，已�
 
 那在这么一个云原生理解的背景下，我再来介绍一下我对云原生应用的设想，也就是我觉得云原生应用应该是什么样子。
 
-![8f712541c80eb2f3d13b408e62031575.png](./image/8f712541c80eb2f3d13b408e62031575.png)
+![8f712541c80eb2f3d13b408e62031575.png](../image/8f712541c80eb2f3d13b408e62031575.png)
 
 在云原生之前，底层平台负责向上提供基本运行资源。而应用需要满足业务需求和非业务需求，为了更好的代码复用，通用型好的非业务需求的实现往往会以类库和开发框架的方式提供，另外在 SOA/ 微服务时代部分功能会以后端服务的方式存在，这样在应用中就被简化为对其客户端的调用代码。
 
 然后应用将这些功能，连同自身的业务实现代码，一起打包。
 
-![5d3cf3ad2988beee45dc45f82427fd6e.png](./image/5d3cf3ad2988beee45dc45f82427fd6e.png)
+![5d3cf3ad2988beee45dc45f82427fd6e.png](../image/5d3cf3ad2988beee45dc45f82427fd6e.png)
 
 而云的出现，可以在提供各种资源之外，还提供各种能力，从而帮助应用，使得应用可以专注于业务需求的实现。
 
 非业务需求相关的功能都被移到云，或者说基础设施中去了，以及下沉到基础设施的中间件。
 
-![fe0338fc565e48553b3c8622a369bd36.png](./image/fe0338fc565e48553b3c8622a369bd36.png)
+![fe0338fc565e48553b3c8622a369bd36.png](../image/fe0338fc565e48553b3c8622a369bd36.png)
 
 以服务间通讯为例：需要实现上面列举的各种功能。
 
-![c75c392145f3f39bd9042edce786e256.png](./image/c75c392145f3f39bd9042edce786e256.png)
+![c75c392145f3f39bd9042edce786e256.png](../image/c75c392145f3f39bd9042edce786e256.png)
 
 SDK 的思路：在应用层添加一个胖客户端，在这个客户端中实现各种功能。
 
-![1572f7e930ce0fc442ae21ac5e2de455.png](./image/1572f7e930ce0fc442ae21ac5e2de455.png)
+![1572f7e930ce0fc442ae21ac5e2de455.png](../image/1572f7e930ce0fc442ae21ac5e2de455.png)
 
 Service Mesh 的思路，体现在将 SDK 客户端的功能剥离出来，放到 Sidecar 中。就是把更多的事情下沉，下沉到基础设施中。
 
-![5176d2f8527054aac3e7106487090d80.png](./image/5176d2f8527054aac3e7106487090d80.png)
+![5176d2f8527054aac3e7106487090d80.png](../image/5176d2f8527054aac3e7106487090d80.png)
 
 在用户看来，应用长这样：
 
-![be9bfa387db52c4eaeb235c7a7a01945.png](./image/be9bfa387db52c4eaeb235c7a7a01945.png)
+![be9bfa387db52c4eaeb235c7a7a01945.png](../image/be9bfa387db52c4eaeb235c7a7a01945.png)
 
 云原生是我们的目标，Service Mesh 交出了自己的答卷，接下来我们可以回到 Service Mesh 这里了。
 
@@ -257,11 +257,11 @@ Service Mesh 的思路，体现在将 SDK 客户端的功能剥离出来，放�
 
 定义
 
-![4123d50c20385fa9300b32e039a6894a.png](./image/4123d50c20385fa9300b32e039a6894a.png)
+![4123d50c20385fa9300b32e039a6894a.png](../image/4123d50c20385fa9300b32e039a6894a.png)
 
 服务网格的基本构成
 
-![8b69728340e60bc09d05422a21a85977.png](./image/8b69728340e60bc09d05422a21a85977.png)
+![8b69728340e60bc09d05422a21a85977.png](../image/8b69728340e60bc09d05422a21a85977.png)
 
 ### 纷争 2017
 
@@ -339,13 +339,13 @@ Istio 支持双向 TLS 加密
 
 使用 Grafana 观测流量情况
 
-![e0d7a41c3390fbaf08c9520c5a6be80b.png](./image/e0d7a41c3390fbaf08c9520c5a6be80b.png)
+![e0d7a41c3390fbaf08c9520c5a6be80b.png](../image/e0d7a41c3390fbaf08c9520c5a6be80b.png)
 
 * 分布式追踪：Jaeger 或 Zipkin
 
 快速观测调用链路
 
-![1b1793a797651edd432a7d15b9af2b46.png](./image/1b1793a797651edd432a7d15b9af2b46.png)
+![1b1793a797651edd432a7d15b9af2b46.png](../image/1b1793a797651edd432a7d15b9af2b46.png)
 
 * 日志：非应用日志
 
@@ -353,7 +353,7 @@ Istio 支持双向 TLS 加密
 
 快速理清服务的关系
 
-![0212a2ab8c82fe4469ccf48f761d4752.png](./image/0212a2ab8c82fe4469ccf48f761d4752.png)
+![0212a2ab8c82fe4469ccf48f761d4752.png](../image/0212a2ab8c82fe4469ccf48f761d4752.png)
 ## 总结
 
 虚拟化技术推动这云计算技术的变革，顺带也影响了后端架构的演进，目前我们身处云时代，将会有更多的元原生应用出现，Istio 作为其中的佼佼者，值得你投入一份精力了解一下。

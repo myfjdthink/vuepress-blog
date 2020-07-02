@@ -5,7 +5,7 @@ tags:
  - 编程相关
  - posts
 categories: 
- - Archived
+ - Architect
 ---
 # 分布式事务的 N 种实现
 
@@ -69,7 +69,7 @@ categories:
 
 谈到分布式事务，首先要说的就是 2PC（two phase commit）方案，如下图所示：
 
-![3b5a072b261c9c6afab0d9e598a41472.png](./image/3b5a072b261c9c6afab0d9e598a41472.png)
+![3b5a072b261c9c6afab0d9e598a41472.png](../image/3b5a072b261c9c6afab0d9e598a41472.png)
 
 2PC 把事务的执行分为两个阶段，第一个阶段即 prepare 阶段，这个阶段实际上就是投票阶段，协调者向参与者确认是否可以共同提交，再得到全部参与者的所有回答后，协调者向所有的参与者发布共同提交或者共同回滚的指令，用以保证事务达到一致性。
 
@@ -79,7 +79,7 @@ categories:
 
 这里我们定义一个充值需求，后续我们在各个实现中看看如何为该需求实现分布式事务。
 
-![9a5aba5d7ade859bf864d931b9c98dc8.png](./image/9a5aba5d7ade859bf864d931b9c98dc8.png)
+![9a5aba5d7ade859bf864d931b9c98dc8.png](../image/9a5aba5d7ade859bf864d931b9c98dc8.png)
 
 Order 和 Account 分别是独立的一个服务，充值完成后，要分别将订单Order 设置为成功以及增加用户余额。
 
@@ -93,7 +93,7 @@ Order 和 Account 分别是独立的一个服务，充值完成后，要分别�
 
 Seata 提供了全局的事务管理器
 
-![cb8928379aa09b1f0bbaba04dcae44ab.png](./image/cb8928379aa09b1f0bbaba04dcae44ab.png)
+![cb8928379aa09b1f0bbaba04dcae44ab.png](../image/cb8928379aa09b1f0bbaba04dcae44ab.png)
 
 ### 原理
 
@@ -107,7 +107,7 @@ Seata 提供了全局的事务管理器
 
 用该方案实现需求的话，就是这样的：
 
-![290170da3fcb82429a979e16e42f45a5.png](./image/290170da3fcb82429a979e16e42f45a5.png)
+![290170da3fcb82429a979e16e42f45a5.png](../image/290170da3fcb82429a979e16e42f45a5.png)
 
 Order 和 Account 都接入 Seata 来代理事务
 
@@ -123,7 +123,7 @@ Order 和 Account 都接入 Seata 来代理事务
 
 TCC(Try-Confirm-Concel) 模型是一种补偿性事务，主要分为 Try：检查、保留资源，Confirm：执行事务，Concel：释放资源三个阶段，如下图所示：
 
-![14732df8f80719e067fee603b53b4a2d.png](./image/14732df8f80719e067fee603b53b4a2d.png)
+![14732df8f80719e067fee603b53b4a2d.png](../image/14732df8f80719e067fee603b53b4a2d.png)
 
 其中，活动管理器记录了全局事务的推进状态以及各子事务的执行状态，负责推进各个子事务共同进行提交或者回滚。同时负责在子事务处理超时后不停重试，重试不成功后转手工处理，用以保证事务的最终一致性。
 
@@ -147,7 +147,7 @@ TCC(Try-Confirm-Concel) 模型是一种补偿性事务，主要分为 Try：检�
 
 ### 实现充值需求
 
-![diagram-tcc.png](./image/diagram-tcc.png)
+![diagram-tcc.png](../image/diagram-tcc.png)
 
 需要把 Oder.done 和 Account 的余额+ 操作都实现 tcc 接口
 
@@ -159,7 +159,7 @@ TCC(Try-Confirm-Concel) 模型是一种补偿性事务，主要分为 Try：检�
 
 以购物场景为例，张三购买物品，账户扣款 100 元的同时，需要保证在下游的会员服务中给该账户增加 100 积分。由于数据库私有，所以导致在实际的操作过程中会出现很多问题，比如先发送消息，可能会因为扣款失败导致账户积分无故增加，如果先执行扣款，则有可能因服务宕机，导致积分不能增加，无论是先发消息还是先执行本地事务，都有可能导致出现数据不一致的结果。
 
-![ceb103cd86a7cda25e4fc25635770dea.png](./image/ceb103cd86a7cda25e4fc25635770dea.png)
+![ceb103cd86a7cda25e4fc25635770dea.png](../image/ceb103cd86a7cda25e4fc25635770dea.png)
 
 事务消息的本质就是为了解决此类问题，解决本地事务执行与消息发送的原子性问题。
 
@@ -169,7 +169,7 @@ TCC(Try-Confirm-Concel) 模型是一种补偿性事务，主要分为 Try：检�
 
 ### 原理
 
-![66b6ae1dec5b96084c3a6d29174a20e3.png](./image/66b6ae1dec5b96084c3a6d29174a20e3.png)
+![66b6ae1dec5b96084c3a6d29174a20e3.png](../image/66b6ae1dec5b96084c3a6d29174a20e3.png)
 
 1. 事务发起方首先发送 prepare 消息到 MQ。
 2. 在发送 prepare 消息成功后执行本地事务。
@@ -187,7 +187,7 @@ TCC(Try-Confirm-Concel) 模型是一种补偿性事务，主要分为 Try：检�
 
 ### 实现充值需求
 
-![diagram-rmq.png](./image/diagram-rmq.png)
+![diagram-rmq.png](../image/diagram-rmq.png)
 
 通过 MQ，来保障 Order 和 Acount 的两个操作要么一起成功，要么一起失败。
 
@@ -215,7 +215,7 @@ topic1是A系统通知B要执行任务了,
 
 topic2是B系统通知A已经完成任务了,
 
-![6788ded12488beeff631ff0ca075e702.png](./image/6788ded12488beeff631ff0ca075e702.png)
+![6788ded12488beeff631ff0ca075e702.png](../image/6788ded12488beeff631ff0ca075e702.png)
 
 1. 用户在A系统里领取优惠券,并往log1插入一条记录
 2. 由定时任务轮询log1,发消息给B系统
@@ -234,7 +234,7 @@ topic2是B系统通知A已经完成任务了,
 
 ### 实现充值需求
 
-![diagram-message.png](./image/diagram-message.png)
+![diagram-message.png](../image/diagram-message.png)
 
 通过消息表，把断开的事务继续执行下去。
 
@@ -251,7 +251,7 @@ topic2是B系统通知A已经完成任务了,
 3. 没有使用关系型数据库，幂等性的实现比较困难。
 ### 实现充值需求
 
-![diagram-koala.png](./image/diagram-koala.png)
+![diagram-koala.png](../image/diagram-koala.png)
 
 难点:
 
@@ -277,7 +277,7 @@ topic2是B系统通知A已经完成任务了,
 
 例如存在服务模块A 、B、 C。A模块是mysql作为数据源的服务，B模块是基于redis作为数据源的服务，C模块是基于mongo作为数据源的服务。若需要解决他们的事务一致性就需要针对不同的节点采用不同的方案，并且统一协调完成分布式事务的处理。
 
-![0f6dbd32fdf49943dfaff1243b40ad2b.png](./image/0f6dbd32fdf49943dfaff1243b40ad2b.png)
+![0f6dbd32fdf49943dfaff1243b40ad2b.png](../image/0f6dbd32fdf49943dfaff1243b40ad2b.png)
 
 方案：将A模块采用 Seata 模式、B/C采用TCC模式就能完美解决。
 

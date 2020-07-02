@@ -5,7 +5,7 @@ tags:
  - posts
  - Kubernetes
 categories: 
- - Archived
+ - Architect
 ---
 # 使用 Helm + Kubernetes 部署微服务
 
