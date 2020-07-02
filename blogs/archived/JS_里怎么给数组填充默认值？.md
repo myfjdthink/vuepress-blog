@@ -40,7 +40,7 @@ Array.apply(null, Array(30))
 
 查看[文档](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array) 可以看到 Array 的构造函数语法，可以得知 Array 支持两种构造方式。使用参数形式给定 N 个数组元素，或者给定一个数组长度。
 
-不过比较重要的一点文档里没提到，使用 `new Array(arrayLength)` 方式构造的数组是一个**稀疏数组**，里面是没有任何值的，只有长度。所以这个方式构造出来的数组是无法遍历的，也就无法用 map 遍历填充值了。![-1477050257372.png](image/-1477050257372.png)
+不过比较重要的一点文档里没提到，使用 `new Array(arrayLength)` 方式构造的数组是一个**稀疏数组**，里面是没有任何值的，只有长度。所以这个方式构造出来的数组是无法遍历的，也就无法用 map 遍历填充值了。![-1477050257372.png](./image/-1477050257372.png)
 
 知道了上述的原因，我们就能理解：
 

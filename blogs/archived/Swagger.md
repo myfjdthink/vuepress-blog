@@ -32,7 +32,7 @@ OpenAPI 语法入门：[https://www.gitbook.com/book/huangwenchao/swagger/detail
 
 一个在线的 demo： [https://editor.swagger.io//?_ga=2.267808907.403623983.1505817850-1482371638.1504594291#/](https://editor.swagger.io//?_ga=2.267808907.403623983.1505817850-1482371638.1504594291#/)
 
-![-1505818063239.png](image/-1505818063239.png)
+![-1505818063239.png](./image/-1505818063239.png)
 
 ## Swagger 可以做什么
 
@@ -67,10 +67,10 @@ Swagger Hub 提供的 [Mock 服务](https://swaggerhub.com/blog/swaggerhub-featu
 官方宣称提供几十个 server 端和 client 端的代码生成服务，但是实际上用处非常有限，以 nodejs-server 为例，这个模板使用 connect 框架，使用 express 和 koa 框架的就不适用了，而且编码风格差距也非常大。
 
 * 官方支持的 Codegen 模板：
-![-1505820236121.png](image/-1505820236121.png)
+![-1505820236121.png](./image/-1505820236121.png)
 
 * nodejs-server 模板生成的代码：
-![-1505820586365.png](image/-1505820586365.png)
+![-1505820586365.png](./image/-1505820586365.png)
 
 ### 自定义模板
 

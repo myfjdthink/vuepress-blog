@@ -23,7 +23,7 @@ Git Hooks，即钩子，关于 Git Hooks 的详细信息，可以看看[官方�
 
 在 Jenkins 的配置页面，勾选 `Trigger builds remotely` 开启 Jenkins 的远程调用功能。
 
-![-1468489265899.png](image/-1468489265899.png)
+![-1468489265899.png](./image/-1468489265899.png)
 
 然后编辑服务器仓库中 jenkins-tutorial.git/hooks 中的 post-update，里面调用这两个链接中的一个即可达到通知 Jenkins 构建任务的目的。该钩子脚本将在代码提交到服务器仓库后执行。
 
@@ -31,7 +31,7 @@ Git Hooks，即钩子，关于 Git Hooks 的详细信息，可以看看[官方�
 
 在 Jenkins 的 Build Triggers 配置页面，我们可以看到如下的配置项：
 
-![-1468489826359.png](image/-1468489826359.png)
+![-1468489826359.png](./image/-1468489826359.png)
 
 Jenkins 可以监听 Github 或者 GitLab 的事件，也可以通过轮询的方式来检查代码是否有更新。
 
@@ -51,11 +51,11 @@ GIthub 的监听比较简单，勾选了就可以，这里不再细说。
 
 Gitlab 的配置选项就比较丰富了。
 
-![-1468491422766.png](image/-1468491422766.png)
+![-1468491422766.png](./image/-1468491422766.png)
 
 在勾选了该选项后，我们就得到一个地址，这个地址就是接收 Gitlab 的 Webhooks 用的。去到 Gitlab 的 Webhooks 配置页面填上这个地址就行啦。
 
-![-1468491196821.png](image/-1468491196821.png)
+![-1468491196821.png](./image/-1468491196821.png)
 
 #### 批评一下 git.oschina
 

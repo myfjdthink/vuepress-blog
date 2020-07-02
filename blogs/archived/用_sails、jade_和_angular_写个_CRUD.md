@@ -26,7 +26,7 @@ categories:
 3. 访问 [http://localhost:8080/foo/crud](http://localhost:8080/foo/crud)，一个管理界面就出来。访问 [http://localhost:8080/foo/crud_s](http://localhost:8080/foo/crud_s) 则是另一种交互风格的管理页面。
 
 4. 长这样
-![-1479970787506.png](image/-1479970787506.png)
+![-1479970787506.png](./image/-1479970787506.png)
 
 ### 原理
 
@@ -84,14 +84,14 @@ compare: { name: '', type: 'string', options: [    {value: '-2', name: '小于�
 某个字段如果是保存图片地址的话，配置一个属性 image:true
 
 在编辑和展示这个字段都能看到图片预览
-![-1478242749310.png](image/-1478242749310.png)
+![-1478242749310.png](./image/-1478242749310.png)
 
-![-1478242763200.png](image/-1478242763200.png)
+![-1478242763200.png](./image/-1478242763200.png)
 
 * object 需要继续定义 object 里有哪些类型的数据
 
 在前端会把 object 的子内容铺开。
-![-1478242389276.png](image/-1478242389276.png)
+![-1478242389276.png](./image/-1478242389276.png)
 
 ```
 price: {  name: '套餐', type: 'object', readOnly: true, attributes: {    "month": {type: 'string', name: '月份'},    "color": {type: 'string', name: '颜色'}  }},
@@ -100,11 +100,11 @@ price: {  name: '套餐', type: 'object', readOnly: true, attributes: {    "mont
 * array 同 object 需要继续定义数据类型。
 
 在前端会以一个子 table 的形式来展开。
-![-1478242461788.png](image/-1478242461788.png)
+![-1478242461788.png](./image/-1478242461788.png)
 
 编辑的时候是这样的：
 
-![-1478242493029.png](image/-1478242493029.png)
+![-1478242493029.png](./image/-1478242493029.png)
 
 ```
 prices: {  type: 'array', name: '套餐信息', required: true, attributes: {    color: {type: 'string', name: '颜色'},    month: {type: 'integer', name: '月份'},    price: {type: 'string', name: '市场价'},    trans_amount: {type: 'string', name: '转入金额'},    earning: {type: 'string', name: '另享收益'},    earning_real: {type: 'string', name: '实质收益'}  }}

@@ -73,7 +73,7 @@ categories:
 
 issue 里给出的解决方案是：
 
-![-1479363515563.png](image/-1479363515563.png)
+![-1479363515563.png](./image/-1479363515563.png)
 
 ## 分析
 
@@ -89,7 +89,7 @@ var ObjectId = require('mongodb').ObjectID;...  query.push({    $match: {      $
 
 sails-mongo 里也引用了 mongodb 这个库，版本是 2.1.3
 
-![-1479364063295.png](image/-1479364063295.png)
+![-1479364063295.png](./image/-1479364063295.png)
 
 这个版本与外部的 mongodb 库 2.2.x 版本有冲突，看来 mongodb 这个库在 2.2.x 升级了某些东西，我们进一步追查，根据报错信息可以定位报错的代码
 
@@ -100,19 +100,19 @@ sails-mongo 里也引用了 mongodb 这个库，版本是 2.1.3
 
 看来是 bson 这个库里有问题，这个是 sails-mongo 里的 bson（0.4.23） 的代码的报错位置
 
-![-1479364537291.png](image/-1479364537291.png)
+![-1479364537291.png](./image/-1479364537291.png)
 
 在 242 行加上断点，可以看到 value 这个变量的情况：
 
-![-1479365009575.png](image/-1479365009575.png)
+![-1479365009575.png](./image/-1479365009575.png)
 
 而 mongodb 里引用的 bson（0.5.6） 的此处代码是这样的
 
-![-1479365570507.png](image/-1479365570507.png)
+![-1479365570507.png](./image/-1479365570507.png)
 
 加断点看到的变量情况：
 
-![-1479365002888.png](image/-1479365002888.png)
+![-1479365002888.png](./image/-1479365002888.png)
 
 看来是 ObjectID 的类型变了， 由之前的 String 变成了 Uint8Array ，这也就契合了报错信息里的 “TypeError: Argument must be a string”， 这就是问题的根源。
 
@@ -138,7 +138,7 @@ var ObjectId = require('mongodb').ObjectID;
 
 哈哈哈， sails-mogno 果然是坑，看看它提供的 objectId 的实现：
 
-![-1479455064688.png](image/-1479455064688.png)
+![-1479455064688.png](./image/-1479455064688.png)
 
 如果你想要生成一个新的 ObjectID，这样写的话
 

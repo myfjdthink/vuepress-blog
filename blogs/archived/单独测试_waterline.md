@@ -46,7 +46,7 @@ var sails = require('sails');before(function(done) {  // Increase the Mocha time
 1. sails 的人员也提供了一个 Express 里使用 waterline 的示例 [Waterline v0.10 Express Example.js](https://gist.github.com/mikermcneil/8443381)
 跟上一个例子同样的问题，还是没讲怎么配置 mongo。
 
-![-坑爹.jpg](image/-坑爹.jpg)
+![-坑爹.jpg](./image/-坑爹.jpg)
 
 ### 自己实现
 
@@ -54,7 +54,7 @@ var sails = require('sails');before(function(done) {  // Increase the Mocha time
 
 让我们小心翼翼地打开 node_module 下的 sails 目录
 
-![-1461308934571.png](image/-1461308934571.png)
+![-1461308934571.png](./image/-1461308934571.png)
 
 额，好直接，文件名已经告诉我们 waterline 是在哪里初始化的了。点进去看看吧。
 

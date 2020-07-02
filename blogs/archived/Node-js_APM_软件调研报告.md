@@ -42,13 +42,13 @@ atatus 提供了 npm 工具包 [atatus-node](https://www.npmjs.com/package/atatu
 
 使用报告：不是 100 % 的采样率，没有收集到官网宣传的各种维度的信息，使用 Koa 框架，基本上只能看到总的 http response time。
 
-![-1531900063055.png](image/-1531900063055.png)
+![-1531900063055.png](./image/-1531900063055.png)
 
 ## newrelic
 
 网址 [https://newrelic.com/](https://newrelic.com/) ，和 atatus 基本相同，也提供 npm 工具包 newrelic。
 
-![-1531900145317.png](image/-1531900145317.png)
+![-1531900145317.png](./image/-1531900145317.png)
 
 ## keymetrics
 
@@ -76,7 +76,7 @@ Pandora.js 是一个 Node.js 应用监控管理器。它集成了多种类型的
 
 这个是 Pandora 提供的比较“先进”的功能，链路追踪理论上可以分析出一个 http 哪里耗时多，例如一个 get 请求，做的事情有，查询 db ，调用 第三方服务等。链路追踪会记录每一个环节的耗时：
 
-![-1531901160806.png](image/-1531901160806.png)
+![-1531901160806.png](./image/-1531901160806.png)
 
 链路追踪的实现依赖了 Node 的一个实验性特性 async_hooks，因为是新特性，目前还有很多问题没有解决，例如 mongoose 和 superagent 两个工具包的 Promise 实现方式会导致 async_hooks，具体可以见我在 Pandora 提的 [issue](https://github.com/midwayjs/pandora/issues/221) ，也就是说，如果你刚好用了这两个框架，Pandora 链路追踪就失效了。
 
@@ -92,11 +92,11 @@ Node.js 性能平台 [https://cn.aliyun.com/product/nodejs](https://cn.aliyun.co
 
 接口访问量的趋势变化：
 
-![-1531901882642.png](image/-1531901882642.png)
+![-1531901882642.png](./image/-1531901882642.png)
 
 处理最慢的接口：
 
-![-1531902040338.png](image/-1531902040338.png)
+![-1531902040338.png](./image/-1531902040338.png)
 
 这套工具的优势在于 grafana， 提供了非常直观的图表。 
 

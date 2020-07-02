@@ -6,7 +6,7 @@ tags:
  - Node
  - 编程相关
 categories: 
- - Archived
+ - Node基础
 ---
 # Node.js 异步编程
 
@@ -14,7 +14,7 @@ categories:
 
 
 
-### 异步的最终解决方案
+## 异步的最终解决方案
 
 在 2017 年，Node 7.6 终于支持了 Async/Await ，async 函数就是 Generator 函数的语法糖，是 JS 异步编程的最终解决方案。
 
@@ -28,7 +28,7 @@ categories:
 2. **更广的适用性**。 co 函数库约定，yield 命令后面只能是 Thunk 函数或 Promise 对象，而 async 函数的 await 命令后面，可以跟 Promise 对象和原始类型的值（数值、字符串和布尔值，但这时等同于同步操作）
 在此之前，JS 的异步编程经历了 Callback、Promise、Generator、Async 的进化，接下来我们过一遍异步发展历程
 
-### 回调函数 Callback
+## 回调函数 Callback
 
 在 JS 中，异步编程通过 Callback 完成，将一个函数作为另一个异步函数的参数，用于处理异步结果，一个例子：
 
@@ -62,7 +62,7 @@ async.map([1, 2, 3], AsyncSquaringLibrary.square,
 
 async模块虽然一定程度上带来了便利，但仍然不够简单，代码也不容易阅读，因此Promise出现了。
 
-### Promise 函数
+## Promise 函数
 
 Promise 的写法：
 
@@ -87,7 +87,7 @@ saveSomething()
 
 只是回调函数的另一种写法，把回调函数的横向加载，改成纵向加载，缺点是代码一堆的 then。
 
-### Generator 函数
+## Generator 函数
 
 Generator 函数是协程在 ES6 的实现，最大特点就是可以交出函数的执行权，注意它不是语法糖。
 
@@ -125,7 +125,7 @@ Generator 函数可以暂停执行和恢复执行，这是它能封装异步任�
 2. 错误处理：`g.throw('出错了');`
 Generator 最大的问题是要手动调用 next() 才会执行下一步，因此自动执行器 co 出现了
 
-### co 执行器
+## co 执行器
 
 co 函数库的用法：
 
@@ -145,7 +145,7 @@ Generator 自动执行需要一种机制，**当异步操作有了结果，能�
 
 co 函数的具体实现见文末参考文章，这里就不重复了
 
-### 拓展阅读：其他语言的异步编程
+## 拓展阅读：其他语言的异步编程
 
 C# 也有 async await 关键字，用于异步调用，内部实现基于线程 
 
@@ -155,7 +155,7 @@ Java Spring 框架有 @Async 注解，用于异步调用，内部实现基于线
 
 [https://spring.io/guides/gs/async-method/](https://spring.io/guides/gs/async-method/)
 
-### 参考文章
+## 参考文章
 
 1. [细说JavaScript异步函数发展历程](http://www.csdn.net/article/2015-09-08/2825643-asynchronous-javascript)
 2. [async 函数的含义和用法](http://www.ruanyifeng.com/blog/2015/05/async.html)

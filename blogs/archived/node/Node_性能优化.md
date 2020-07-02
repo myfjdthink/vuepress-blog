@@ -4,7 +4,7 @@ date: 2016-03-22
 tags:
  - posts
 categories: 
- - Archived
+ - Node基础
 ---
 # Node 性能优化
 
@@ -118,7 +118,7 @@ var user_account_map = {}   // 注意这个对象将会消耗大量内存。user
 
 [https://www.zhihu.com/question/24282796](https://www.zhihu.com/question/24282796)
 
-![-1460603225863.png](image/-1460603225863.png)
+![-1460603225863.png](../image/-1460603225863.png)
 
 ### 二、内存泄露排查
 
@@ -203,9 +203,9 @@ memwatch.on('leak', function(info) { console.error(info); var file = '/tmp/myapp
 
 heapdump 提供的内存快照是可以用 Chrome 的开发者工具来查看的。把 .heapsnapshot 文件导入到 Chrome Developer Tools
 
-![-1461553851743.png](image/-1461553851743.png)
+![-1461553851743.png](../image/-1461553851743.png)
 
-![-1461553811915.png](image/-1461553811915.png)
+![-1461553811915.png](../image/-1461553811915.png)
 
 怎么使用内存分析工具呢？ 
 
@@ -225,11 +225,11 @@ heapdump 提供的内存快照是可以用 Chrome 的开发者工具来查看的
 
  可以看出 array 是内存增长的主要元凶，但也只能得到这个线索，那具体是那些 array 消耗了内存呢？ 
 
- 点开 array 查看详细信息：![-1461553765122.png](image/-1461553765122.png)
+ 点开 array 查看详细信息：![-1461553765122.png](../image/-1461553765122.png)
 
 一大堆的匿名数组，无法准确查到具体那些 array 消耗了内存。 
 
-主要原因是后端使用了 sails 这个 web 框架，框架里的代码量比较多，干扰项太多，无法准确地判断是哪些 function 出现了问题。![-1461554196807.png](image/-1461554196807.png)
+主要原因是后端使用了 sails 这个 web 框架，框架里的代码量比较多，干扰项太多，无法准确地判断是哪些 function 出现了问题。![-1461554196807.png](../image/-1461554196807.png)
 
 #### 内存泄露原因
 
