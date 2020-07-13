@@ -11,7 +11,7 @@ blog:
     protocol: https
     # 新增的 CDN 自定义域名配置
     hosts:
-      - host: blog.myfjdthink.com # 希望配置的自定义域名
+      - host: www.myfjdthink.com # 希望配置的自定义域名
         https:
           certId: eUsMglwe # SSL 证书 ID
           http2: off
