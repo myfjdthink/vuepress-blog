@@ -1,14 +1,16 @@
 {
-  "name": "blog",
+  "name": "nick_blog",
   "version": "1.0.0",
   "author": "reco_luan",
   "scripts": {
-    "dev": "vuepress dev . --open --host \"localhost\"",
+    "dev": "vuepress dev .",
+    "dev_no-cache": "vuepress dev --no-cache",
+    "help": "vuepress dev --help",
     "build": "vuepress build ."
   },
   "devDependencies": {
     "vuepress": "1.8.2",
     "vuepress-theme-reco": "1.6.14"
   },
-  "description": "blog"
+  "description": "nick blog"
 }

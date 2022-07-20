@@ -1,7 +1,7 @@
 module.exports = {
-  "title": "blog",
-  "description": "blog",
-  "dest": "public",
+  title: "进达的博客",
+  description: '做个追求的程序员. 从后端到大数据',
+  dest: 'public',
   "head": [
     [
       "link",
@@ -20,47 +20,11 @@ module.exports = {
   ],
   "theme": "reco",
   "themeConfig": {
-    "nav": [
-      {
-        "text": "Home",
-        "link": "/",
-        "icon": "reco-home"
-      },
-      {
-        "text": "TimeLine",
-        "link": "/timeline/",
-        "icon": "reco-date"
-      },
-      {
-        "text": "Docs",
-        "icon": "reco-message",
-        "items": [
-          {
-            "text": "vuepress-reco",
-            "link": "/docs/theme-reco/"
-          }
-        ]
-      },
-      {
-        "text": "Contact",
-        "icon": "reco-message",
-        "items": [
-          {
-            "text": "GitHub",
-            "link": "https://github.com/recoluan",
-            "icon": "reco-github"
-          }
-        ]
-      }
+    nav: [
+      {text: 'Home', link: '/', icon: 'reco-home'},
+      {text: 'TimeLine', link: '/timeline/', icon: 'reco-date'},
+      {text: 'GitHub', link: 'https://github.com/myfjdthink', icon: 'reco-github'}
     ],
-    "sidebar": {
-      "/docs/theme-reco/": [
-        "",
-        "theme",
-        "plugin",
-        "api"
-      ]
-    },
     "type": "blog",
     "blogConfig": {
       "category": {
@@ -72,28 +36,14 @@ module.exports = {
         "text": "Tag"
       }
     },
-    "friendLink": [
-      {
-        "title": "午后南杂",
-        "desc": "Enjoy when you can, and endure when you must.",
-        "email": "1156743527@qq.com",
-        "link": "https://www.recoluan.com"
-      },
-      {
-        "title": "vuepress-theme-reco",
-        "desc": "A simple and beautiful vuepress Blog & Doc theme.",
-        "avatar": "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
-        "link": "https://vuepress-theme-reco.recoluan.com"
-      }
-    ],
-    "logo": "/logo.png",
+    "logo": "/avatar.jpg",
     "search": true,
-    "searchMaxSuggestions": 10,
+    "searchMaxSuggestions": 15,
     "lastUpdated": "Last Updated",
     "author": "Nick",
-    "authorAvatar": "/avatar.png",
-    "record": "xxxx",
-    "startYear": "2017"
+    "authorAvatar": "/avatar.jpg",
+    "record": "",
+    "startYear": "2015"
   },
   "markdown": {
     "lineNumbers": true

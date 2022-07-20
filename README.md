@@ -1,7 +1,7 @@
 ---
 home: true
 heroText: 进达的博客
-tagline: 做个追求的程序员. 从后端到大数据 java nodejs python spark flink.
+tagline: 做个追求的程序员. 从后端到大数据
 # heroImage: /hero.png
 # heroImageStyle: {
 #   maxWidth: '600px',
@@ -11,7 +11,8 @@ tagline: 做个追求的程序员. 从后端到大数据 java nodejs python spar
 #   background: '#fff',
 #   borderRadius: '1rem',
 # }
-bgImage: '/background-cover.jpg'
+
+# (bgImage: '/background-cover.jpg')
 bgImageStyle: {
   height: '450px'
 }
