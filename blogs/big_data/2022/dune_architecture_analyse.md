@@ -65,7 +65,7 @@ hasura 会调度一个 engine 来完成 sql query。不过会同步返回一个 
   }
 }
 ```
-等后端返回说 sql query 完成是，前端会发起取数请求
+等后端返回 sql query 完成时，前端会发起取数请求
 ```json
 {
     "operationName": "FindResultDataByJob",
@@ -85,10 +85,36 @@ OK 我们可以得到初步结论，Dune 的查询是异步式的，使用 hasur
 
 从文档的介绍可知，V2 的 engine 是 “Instance of Apache Spark hosted on Databricks” ，托管在 Databricks 的 Spark 集群，SQL方言也改为了 DatabricksSQL。
 
-TBD
+### [DatabricksSQL](https://databricks.com/product/databricks-sql) 
+和 Bigquery 类似，是一个 serverless sql 数据湖计算平台，而且也是 sql only, 不过背后跑的还是 Spark，可以看看这个 [video](https://www.youtube.com/watch?v=OMjxlqIqSqs&ab_channel=Databricks) 快速了解下。
+
+在 Dune 上实测，V2 的查询速度会比较慢，使用日期过滤查询 transactions 表，需要 1min 左右。
 
 
-## 抽象
+值得思考的是，几家区块链数据分析平台一致选择了这类 sql only 的数据湖方案
+- Nansen：Bigquery
+- Footprint：Bigquery
+- [Flipside](https://flipsidecrypto.xyz/)：Snowflake
+- Dune V2：DatabricksSQL（Dune V2 终于开始跟上来了）
 
-Why DBT?
+
+为什么？ 我觉得有几点原因：
+- 存储数据量大，像 BSC Solana 链底层数据有 TB 级别
+- 数据湖方案无需运维，开箱即用
+- 绝大部分指标，使用 SQL 就可以完成计算
+
+### 抽象 Abstractions
+Dune 对常用的指标做了整合，称为 Abstractions，Abstraction in DuneV2 will run on dbt (data build tool).
+
+sql only 的模式下，使用 [dbt](https://www.getdbt.com/) 是一个必然选择, sql 不像代码那样好管理，而 dbt 为 sql 提供了工程化的能力。
+
+## 总结
+
+最后，总结一下，Dune V2 组件和实现方案：
+- 链数据同步，chain --> databricks sql：方案未知
+- event logs：方案未知
+- chain data 存储： databricks sql
+- 计算引擎： databricks sql
+- query api： hasura
+- web ui: 方案未知
 
