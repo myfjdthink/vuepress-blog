@@ -1,5 +1,5 @@
 ---
-title: How to view spark executor logs on Dataproc
+title: How to view spark executor logs in Dataproc
 date: 2022-07-18
 tags:
  - BigData
