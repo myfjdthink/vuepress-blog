@@ -1,5 +1,5 @@
 ---
-title: Koalas 的不是 pyspark 计算的首选项
+title: Koalas 不是 pyspark 计算的首选项
 date: 2022-07-29
 tags:
  - BigData
