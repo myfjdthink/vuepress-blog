@@ -1,7 +1,14 @@
+const { tocPlugin } = require('@vuepress/plugin-toc')
+
 module.exports = {
   title: "进达的博客",
-  description: '做个追求的程序员. 从后端到大数据',
+  description: '',
   dest: 'public',
+  plugins: [
+    tocPlugin({
+      // options
+    }),
+  ],
   "head": [
     [
       "link",
@@ -40,8 +47,8 @@ module.exports = {
     "search": true,
     "searchMaxSuggestions": 15,
     "lastUpdated": "Last Updated",
-    "author": "Nick",
-    "authorAvatar": "/avatar.jpg",
+    "author": "Nick 进达",
+    "authorAvatar": "/avatar.jpeg",
     "record": "",
     "startYear": "2015"
   },

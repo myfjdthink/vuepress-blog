@@ -1,7 +1,7 @@
 ---
 home: true
 heroText: 进达的博客
-tagline: 做个追求的程序员. 从后端到大数据
+tagline: 思考 实践 记录
 # heroImage: /hero.png
 # heroImageStyle: {
 #   maxWidth: '600px',
