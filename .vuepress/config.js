@@ -34,7 +34,7 @@ module.exports = {
     ],
     "type": "blog",
     vssueConfig: {
-      platform: 'github',
+      platform: 'github-v4',
       owner: 'myfjdthink',
       repo: 'vssue myfjdthink blog',
       clientId: 'a8fb5d3cadd855f62280',
