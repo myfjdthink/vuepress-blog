@@ -33,6 +33,13 @@ module.exports = {
       {text: 'GitHub', link: 'https://github.com/myfjdthink', icon: 'reco-github'}
     ],
     "type": "blog",
+    vssueConfig: {
+      platform: 'github',
+      owner: 'myfjdthink',
+      repo: 'vssue myfjdthink blog',
+      clientId: 'a8fb5d3cadd855f62280',
+      clientSecret: '8b7b813efab689e1aeb755d09415e7a4b4691579',
+    },
     "blogConfig": {
       "category": {
         "location": 2,
