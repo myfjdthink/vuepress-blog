@@ -2,6 +2,7 @@ const request = require('superagent')
 require('superagent-proxy')(request)
 const fs = require('fs')
 const debug = require('debug')('chatgpt')
+// chatpgt 的 api key
 const user_api_keys = '' || process.env.API_KEY
 const proxy = process.env.http_proxy
 
