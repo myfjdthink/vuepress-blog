@@ -9,7 +9,7 @@ categories:
 
 最近 ChatGPT 非常火热，还推出了 API 接口，顺手就用 API 做个了自动文章润色脚本
 
-完整代码见：https://github.com/myfjdthink/vuepress-blog/blob/master/polisher.js
+完整代码见：[https://github.com/myfjdthink/vuepress-blog/blob/master/polisher.js](https://github.com/myfjdthink/vuepress-blog/blob/master/polisher.js)
 
 
 对比效果
