@@ -48,7 +48,7 @@ module.exports = {
     "searchMaxSuggestions": 15,
     "lastUpdated": "Last Updated",
     "author": "Nick 进达",
-    "authorAvatar": "/avatar.jpeg",
+    "authorAvatar": "/avatar.jpg",
     "record": "",
     "startYear": "2015"
   },

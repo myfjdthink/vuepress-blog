@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "author": "reco_luan",
   "scripts": {
-    "dev": "vuepress dev .",
+    "dev": "NODE_OPTIONS=--openssl-legacy-provider vuepress dev .",
     "dev_no-cache": "vuepress dev --no-cache",
     "help": "vuepress dev --help",
     "build": "vuepress build ."
@@ -17,5 +17,6 @@
   "dependencies": {
     "superagent": "^8.0.9",
     "superagent-proxy": "^3.0.0"
-  }
+  },
+  "packageManager": "pnpm@10.12.4+sha512.5ea8b0deed94ed68691c9bad4c955492705c5eeb8a87ef86bc62c74a26b037b08ff9570f108b2e4dbd1dd1a9186fea925e527f141c648e85af45631074680184"
 }
