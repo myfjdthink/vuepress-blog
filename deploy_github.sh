@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+export NODE_OPTIONS=--openssl-legacy-provider
+
 # 确保脚本抛出遇到的错误
 set -e
 
