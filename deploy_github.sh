@@ -18,6 +18,7 @@ git init
 git add -A
 git commit -m 'deploy'
 
+git branch -M master 
 # 如果发布到 https://<USERNAME>.github.io
 git push -f git@github.com:myfjdthink/myfjdthink.github.io.git master
 
