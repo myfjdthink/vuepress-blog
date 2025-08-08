@@ -1,5 +1,5 @@
 ---
-title: Serverless 架构实践：从问题到解决方案的完整指南
+title: Serverless 架构选型
 date: 2025-07-23
 tags:
  - AI
