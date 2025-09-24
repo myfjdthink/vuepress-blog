@@ -5,9 +5,6 @@ FROM node:16-alpine as builder
 # 设置工作目录
 WORKDIR /app
 
-# 设置环境变量
-ENV NODE_OPTIONS=--openssl-legacy-provider
-
 # 复制 package 文件
 COPY package.json ./
 
