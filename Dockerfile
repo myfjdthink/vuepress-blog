@@ -1,6 +1,6 @@
 # 多阶段构建 Dockerfile
 # 第一阶段：构建应用
-FROM node:alpine as builder
+FROM node:16-alpine as builder
 
 # 设置工作目录
 WORKDIR /app
@@ -10,13 +10,15 @@ ENV NODE_OPTIONS=--openssl-legacy-provider
 
 # 复制 package 文件
 COPY package.json ./
-COPY pnpm-lock.yaml* ./
 
 # 安装 pnpm
-RUN npm install -g pnpm
+RUN npm install -g pnpm@8.15.6
 
 # 安装依赖
-RUN pnpm install
+RUN pnpm install --frozen-lockfile=false --shamefully-hoist
+
+# 清理缓存
+RUN pnpm store prune
 
 # 复制源代码
 COPY . .
