@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "author": "reco_luan",
   "scripts": {
-    "dev": "NODE_OPTIONS=--openssl-legacy-provider vuepress dev .",
+    "dev": "vuepress dev .",
     "dev_no-cache": "vuepress dev --no-cache",
     "help": "vuepress dev --help",
-    "build": "NODE_OPTIONS=--openssl-legacy-provider vuepress build ."
+    "build": "vuepress build ."
   },
   "devDependencies": {
     "@vuepress/plugin-toc": "^2.0.0-beta.49",
