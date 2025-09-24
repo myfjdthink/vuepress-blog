@@ -1,8 +1,6 @@
 # 依赖目录
 node_modules
 npm-debug.log*
-package-lock.json
-pnpm-lock.yaml
 
 # 构建输出
 public

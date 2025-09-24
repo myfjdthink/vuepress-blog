@@ -7,12 +7,13 @@ WORKDIR /app
 
 # 复制 package 文件
 COPY package.json ./
+COPY package-lock.json ./
 
 # 清理可能的缓存
-RUN rm -rf node_modules package-lock.json
+RUN rm -rf node_modules
 
 # 安装依赖，强制使用 overrides
-RUN npm install --legacy-peer-deps --no-package-lock
+RUN npm install
 
 # 复制源代码
 COPY . .
