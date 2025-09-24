@@ -8,20 +8,17 @@ WORKDIR /app
 # 复制 package 文件
 COPY package.json ./
 
-# 安装 pnpm
-RUN npm install -g pnpm@8.15.6
+# 清理可能的缓存
+RUN rm -rf node_modules package-lock.json
 
-# 安装依赖
-RUN pnpm install --frozen-lockfile=false --shamefully-hoist
-
-# 清理缓存
-RUN pnpm store prune
+# 安装依赖，强制使用 overrides
+RUN npm install --legacy-peer-deps --no-package-lock
 
 # 复制源代码
 COPY . .
 
 # 构建应用
-RUN pnpm run build
+RUN npm run build
 
 # 第二阶段：运行时镜像
 FROM nginx:alpine
