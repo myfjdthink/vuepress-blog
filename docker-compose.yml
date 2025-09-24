@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  blog:
+    build: .
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    container_name: nick-blog
+
+  # 可选：如果需要 HTTPS，可以添加反向代理
+  # nginx-proxy:
+  #   image: jwilder/nginx-proxy
+  #   ports:
+  #     - "80:80"
+  #     - "443:443"
+  #   volumes:
+  #     - /var/run/docker.sock:/tmp/docker.sock:ro

@@ -1,0 +1,32 @@
+# 依赖目录
+node_modules
+npm-debug.log*
+
+# 构建输出
+public
+
+# 版本控制
+.git
+.gitignore
+
+# IDE
+.vscode
+.idea
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 日志
+*.log
+
+# 临时文件
+tmp
+temp
+
+# 部署脚本
+deploy_github.sh
+
+# Docker 相关
+Dockerfile
+.dockerignore
