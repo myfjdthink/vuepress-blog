@@ -3,22 +3,23 @@
   "version": "1.0.0",
   "author": "reco_luan",
   "scripts": {
-    "dev": "vuepress dev .",
+    "dev": "NODE_OPTIONS=--openssl-legacy-provider vuepress dev .",
     "dev_no-cache": "vuepress dev --no-cache",
     "help": "vuepress dev --help",
     "build": "vuepress build ."
   },
   "devDependencies": {
+    "@vuepress/plugin-google-analytics": "^1.9.10",
     "@vuepress/plugin-toc": "^2.0.0-beta.48",
     "vuepress": "1.8.2",
     "vuepress-theme-reco": "1.6.14"
   },
   "description": "nick blog",
   "dependencies": {
-    "vue": "2.7.16",
-    "vue-server-renderer": "2.7.16",
     "superagent": "^8.0.9",
-    "superagent-proxy": "^3.0.0"
+    "superagent-proxy": "^3.0.0",
+    "vue": "2.7.16",
+    "vue-server-renderer": "2.7.16"
   },
   "resolutions": {
     "vue": "2.7.16",

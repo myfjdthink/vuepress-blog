@@ -8,6 +8,12 @@ module.exports = {
     tocPlugin({
       // options
     }),
+    [
+      '@vuepress/google-analytics',
+      {
+        'ga': 'G-ZJ5HRH6PEV' // UA-00000000-0
+      }
+    ]
   ],
   "head": [
     [
